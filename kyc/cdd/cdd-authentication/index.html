@@ -1,0 +1,600 @@
+<link rel="icon" href="../../../includes/themes/EI-English/images/all/favicon.ico" type="image/x-icon">
+
+<!-- Mirrored from www.emiratesislamic.ae/eng/kyc/cdd/cdd-authentication/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 01:33:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<body id="#$.getTopID()#" class="twoColSL depth#arrayLen($.event('crumbdata'))#">
+<div class="main">
+<div name="region" class="header" id="header">
+</div>
+<div id="main">
+<div id="content" class="clearfix"> <!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="../../../../cf_scripts/scripts/cfform.js"></script>
+<script type="text/javascript" src="../../../../cf_scripts/scripts/masks.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../../includes/themes/EI-English/images/all/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../../../includes/themes/EI-English/images/favicon.png" />
+<!--[if lte IE 8]>
+    <script type="text/javascript">
+        var r = confirm('You are using an outdated version of Internet Explorer. please upgrade to the latest version of IE or click ok to open this application in google chrome, Thank you.');
+        if (r == true) {
+          var shell = new ActiveXObject("WScript.Shell");
+          shell.run("chrome /eng/kyc/cdd/cdd-authentication/");
+          window.open('','_parent','');
+               window.close();
+        } 
+    </script>
+<![endif]-->
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/bootstrap.min.css">
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/bootstrap-select.min.css">
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/plugins.css" />
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/raleway-webfont.css" />
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/style.css">
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/radio.css">
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/responsive.css" />
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/circle.css">
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/Datepicker.css" />
+<link rel="stylesheet" href="../../../includes/themes/EI-English/css/cdd/Aristo/Aristo.css" />
+<link rel="stylesheet" href="../../../../../maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="../../../includes/themes/EI-English/js/cdd/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/jquery.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/jquery.validate.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/submit.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/section.js"></script>
+<style type="text/css">
+		.md-grp
+		{
+			margin-top:3%;
+		}
+			.fcolor {
+				color: #ffffff !important;
+			}
+/*.tooltipspan {
+	z-index:10;
+	display:none;
+	padding:10px;
+	margin-top:0px;
+	margin-left:0px;
+	line-height:10px;
+	width:100%;
+}
+a#tooltip:hover .tooltipspan, a#tooltipmsg:hover .tooltipspan {
+	display:inline;
+	position:absolute;
+	color:#FFF;
+	border:1px solid #333;
+	background:#FFF;
+	text-decoration:none;
+	line-height:20px;
+	padding:10px;
+}
+.tooltipspan {
+	border-radius:4px;
+	box-shadow: 5px 5px 8px #CCC;
+}
+
+a#tooltip {
+	background: url('//cdn.emiratesnbd.com/en/assets/images/help.jpg') no-repeat scroll 0px 10px transparent;
+	padding:15px;
+}*/
+		</style>
+<script>
+            $(document).ready(function() {
+				function ajaxcaptcha() {
+					var i = Math.round(10000*Math.random());
+					var img ='false';
+					$.ajax({
+						type:'post',
+						cache:false,
+						url: "/eng/captcha/?random="+i,
+						success: function(text){								
+						$("#captchaImage_Span").empty().html($.trim(text));	
+						}
+					});
+				}
+				
+				$("#idRefresh").click(function()
+				{
+					var i = Math.round(10000*Math.random());
+					$("#idRefresh").attr('src','../../../assets/images/loader.gif');
+					$.ajax({ 
+						url: "/eng/captcha2/?random="+i,
+						success: function(text){
+						var result = text.replace(/<[\/]{0,1}(p)[^><]*>/ig,"");
+						values=result.split(',');
+						one=values[0];
+						two=values[1];					
+						$("#captcha_check").val(one);
+						$("#captchaImage").attr('src','/eng/assets/images/captcha/C'+$.trim(two)+".png");
+						$("#idRefresh").attr('src','../../../assets/images/captchaRefresh.jpg');
+						}
+					});
+				});  
+				
+            });
+            </script>
+<script type="text/javascript">
+<!--
+    _CF_checksection21 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<script type="text/javascript">
+<!--
+    _CF_checksection22 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<script type="text/javascript">
+<!--
+    _CF_checksection23 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+<body>
+<div>
+<nav class="navbar navbar-light bg-faded topmenu">
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav list-inline">
+<li class="nav-item active"> <a class="nav-link" href="../../../map-locator/index.html">ATM / Branch Locator&nbsp;&nbsp;&nbsp;&nbsp;|</a> </li>
+<li class="nav-item"> <a class="nav-link" href="../../../about-us/careers/index.html">Careers&nbsp;&nbsp;&nbsp;&nbsp;|</a> </li>
+<li class="nav-item"> <a class="nav-link" href="index.html">Update KYC Details&nbsp;&nbsp;&nbsp;&nbsp;|</a> </li>
+<li class="nav-item"> <a class="nav-link" href="../../../general/faqs/index.html">FAQs&nbsp;&nbsp;&nbsp;&nbsp;|</a> </li>
+<li class="nav-item"> <a class="nav-link" href="../../../contact-us/index.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;|</a> </li>
+<li class="nav-item"> <a class="nav-link" href="../../../promotions/index.html">Promotions</a> </li>
+</ul>
+</div>
+</nav>
+<nav class="navbar navbar-default navbar-fixed-top togglebg ">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="menucompleted"><a href="#"><i class="fa fa-user"> </i> Primary Information <span class="sr-only">(current)</span></a></li>
+<li class="menuactive"><a href="#"><i class="fa fa-user-plus"> </i> Proffessional Information</a></li>
+<li class="menudisable"><a href="#"><i class="fa fa-money"> </i> Account Information</a></li>
+<li class="menudisable"><a href="#"><i class="fa fa-building-o"> </i> Correspondance Information</a></li>
+<li class="menudisable"><a href="#"><i class="fa fa-file"> </i> Document Upload</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<nav class="navbar navbar-default logocontainer ">
+<div class="container">
+<div class="logodiv col-lg-2 col-md-2">
+<a class="" href="../../../index.html"><img src="../../../includes/themes/EI-English/images/cdd/logo.gif" alt="" /></a>
+</div>
+</div>
+</nav>
+<div class="bannerimage">
+<img src="../../../includes/themes/EI-English/images/cdd/KYC_remediation_1600x229.jpg" alt="" class="banimage" />
+</div>
+<section id="about" class="sections">
+<div class="container">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 headerref" style="background:none">
+<div class="col-lg-1 col-md-1"></div>
+<div class="col-lg-3 col-md-3">
+<span id="Product"></span>
+</div>
+<div class="col-lg-4 col-md-4">
+<span></span><span id="Reference"></span>
+</div>
+<div class="col-lg-4 col-md-4">
+<div style="height: 20px;margin-bottom: 20px;">
+</div>
+</div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 tabmenu">
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+<header class="copyright-footer headermenu completedbg">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 ">
+<div class="copyright text-center defaultfont header_align">
+<span><i class="fa fa-user fa-2x"></i></span>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+<header class="copyright-footer headermenu currentbg">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 ">
+<div class="copyright text-center defaultfont header_align">
+<span><i class="fa fa-user-plus fa-2x"> </i></span>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+<header class="copyright-footer headermenu menudisable ">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 ">
+<div class="copyright text-center completedfont header_align">
+<span><i class="fa fa-money fa-2x"> </i></span>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+<header class="copyright-footer headermenu menudisable ">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 ">
+<div class="copyright text-center completedfont header_align">
+<span><i class="fa fa-envelope fa-2x"> </i></span>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+<header class="copyright-footer headermenu menudisable ">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 ">
+<div class="copyright text-center completedfont header_align">
+<span><i class="fa fa-file fa-2x"> </i></span>
+</div>
+</div>
+</div>
+</header>
+</div>
+</div>
+<div class="col-lg-8" id="page3" style="display:block;">
+<div id="accordion" role="tablist" aria-multiselectable="true">
+<div id="divAuth" class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<form name="section21" id="section21" action="https://www.emiratesislamic.ae/eng/index.cfm/kyc/cdd/cdd-authentication/" method="post" onsubmit="return _CF_checksection21(this)">
+<div class="card-header copyright-footer headermenu fcolor" role="tab" id="heading21">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="true" aria-controls="collapse21" class="accordianheader">
+KYC Document Upload
+</a>
+</div>
+<div id="collapse21" class="collapse in" role="tabpanel" aria-labelledby="heading21">
+<div class="card-block">
+<div class="form-group md-grp col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<input type="hidden" name="cust_errors" id="cust_errors" />
+<label class="errorlabel error_cust_errors"></label>
+</div>
+<div class="form-group md-grp col-lg-12">
+<label class="control-label active ref-color"><strong>Please enter any one of the following details</strong></label>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="margin-top:5%">
+<label class="control-label" for="txtdebitnum">
+Debit Card Number</label>
+<i class="fa fa-info-circle fa-2x" title="16-digit number mentioned on your ATM Debit Card."></i>
+<input type="tel" class="form-control allownumericwithoutdecimal " name="txtdebitnum" id="txtdebitnum" maxlength="16" data-toggle="tooltip" title="Debit Card Number" />
+<input type="hidden" name="txtdebitnum_val" id="txtdebitnum_val" />
+<label class="errorlabel error_txtdebitnum"></label>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="clear:both"><center>OR</center></div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6  inner-addon right-inner-addon" style="clear:left">
+<label class="control-label" for="txtaccountno">
+Account Number</label>
+<i class="fa fa-info-circle fa-2x" title="Account number is the 13-digit number provided by the Bank."></i>
+<input type="text" class="form-control accountno allownumericwithoutdecimal " name="txtaccountno" id="txtaccountno" maxlength="20" data-toggle="tooltip" title="Enter your Account Number">
+<input type="hidden" name="txtaccountno_val" id="txtaccountno_val" />
+<label class="errorlabel error_txtaccountno"></label>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="clear:both"><center>OR</center></div>
+ <div class="form-group md-grp col-lg-6 col-md-6 col-sm-6  inner-addon right-inner-addon" style="clear:left">
+<label class="control-label" for="txtcifno">Customer ID</label>
+<i class="fa fa-info-circle fa-2x" title="The 8-digit unique number provided in your eStatement"></i>
+<input type="tel" class="form-control allownumericwithoutdecimal " name="txtcifno" id="txtcifno" maxlength="20" data-toggle="tooltip" title="Customer ID">
+<input type="hidden" name="txtcifno_val" id="txtcifno_val" />
+<label class="errorlabel error_txtcifno"></label>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="clear:both"><center>OR</center></div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6  inner-addon right-inner-addon" style="clear:left">
+<label class="control-label" for="txtcreaditcardno">
+Credit Card Number</label>
+<i class="fa fa-info-circle fa-2x" title="16-digit number mentioned on your Credit Card."></i>
+<input type="tel" class="form-control allownumericwithoutdecimal " name="txtcreaditcardno" id="txtcreaditcardno" maxlength="16" data-toggle="tooltip" title="Credit Card Number">
+<input type="hidden" name="txtcreaditcardno_val" id="txtcreaditcardno_val" />
+<label class="errorlabel error_txtcreaditcardno"></label>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6"></div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="clear:both"></div>
+<div class="form-group md-grp col-lg-12" style="clear:left; left:15px; border-top:1px solid #ccc">
+<label class="control-label" for="textinput" style="left:0px;">Please enter the text in the image below to proceed<em>*</em></label></div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 inner-addon right-inner-addon" style="clear:both"></div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6" style="clear:both; margin-top:40px">
+<input name="captcha" id="captcha" type="text" class="form-control input-lg" maxlength="6" autocomplete="off" placeholder="Security Code"><br>
+<span id="captchaImage_Span">
+<img id="captchaImage" src="../../../assets/images/captcha/C3468168.png" onerror="ajaxcaptcha(this);" style="float:left;width:192px; height:50px" class="pure-input-1">&nbsp;&nbsp;&nbsp;<img src="../../../assets/images/captchaRefresh.jpg" id="idRefresh" style="cursor:pointer;margin-bottom:-6px;width:24px; height:24px" />
+</span>
+</div>
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 " style="clear:both">
+<div>
+<input type="hidden" name="cust_captcha" id="cust_captcha" />
+<label class="errorlabel error_captcha" style="margin-top:22px;"></label>
+</div>
+</div>
+<div class="form-check text-center">
+<label class="form-check-label terms-conditions">
+<input type="checkbox" class="form-check-input" name="terms" id="terms">
+I agree to the <a href="../../../terms-and-conditions/kyc-remedy/index.html" target="_blank" style="text-decoration:underline; font-size:inherit; font-family:inherit; color:inherit; font:inherit;">Terms and Conditions</a> for use of the website and uploading my documents*.
+</label>
+<input type="hidden" name="hdnterms" id="hdnterms" /></br>
+<label class="errorlabel error_hdnterms"></label>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttongroup">
+<div class="col-lg-3 col-md-3 col-sm-3">
+<button type="button" class="btn btn-block btn-info btn-xs accordbtn " name="twntyonenxt" id="twntyonenxt">Next</button>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 otp_div" style="display:none">
+<form name="section22" id="section22" action="https://www.emiratesislamic.ae/eng/index.cfm/kyc/cdd/cdd-authentication/" method="post" onsubmit="return _CF_checksection22(this)">
+<div class="card-header copyright-footer subheadermenu accodheader diableacc otp_div" role="tab" id="heading22">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse22" aria-expanded="true" id="heading22a" aria-controls="collapse22" class="accordianheader accodheader">
+
+One Time Password
+</a>
+</div>
+<div id="collapse22" class="collapse" role="tabpanel" aria-labelledby="heading22">
+<div class="card-block" style="margin-top:3%">
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 otp_div">
+<label class="control-label" for="txtOTP">Please enter your OTP*</label>
+<input type="text" class="form-control " name="txtOTP" id="txtOTP" data-toggle="tooltip" maxlength="6" title="Please enter 6 digit authentication code sent to your registered mobile number">
+<input type="hidden" name="accountno1_val" id="accountno1_val" />
+<label class="errorlabel error_txtOTP"></label>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 comparegroup otp_div">
+<button type="button" class="btn btn-block btn-xs resend active displaynone" name="ResendOTP" id="ResendOTP">Resend</button>
+<span class="timer btn btn-block btn-xs resend" id="timer"></span>
+<input type="hidden" value="0" id="timerval">
+</div>
+<div class="form-group md-grp col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<input type="hidden" name="otp_errors" id="otp_errors" />
+<label class="errorlabel error_otp_errors"></label>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttongroup">
+<div class="col-lg-3 col-md-3 col-sm-3">
+<button type="button" class="btn btn-block btn-info btn-xs accordbtn " name="twentytwonxt" id="twentytwonxt">Next</button>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 corp_div" style="display: none;">
+<form name="section23" id="section23" action="https://www.emiratesislamic.ae/eng/index.cfm/kyc/cdd/cdd-authentication/" method="post" onsubmit="return _CF_checksection23(this)">
+<div class="card-header copyright-footer subheadermenu accodheader corp_div" role="tab" id="heading23">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse23" aria-expanded="true" id="heading23a" aria-controls="collapse23" class="accordianheader accodheader">
+
+Corporate Entity
+</a>
+</div>
+<div id="collapse23" class="collapse" role="tabpanel" aria-labelledby="heading23">
+<div class="card-block">
+<div class="form-group md-grp col-lg-6 col-md-6 col-sm-6 corp_div">
+<label class="control-label" for="txtCorpOTP" style="font-size:11px !important">Please enter the OTP sent to your registered mobile/email*</label>
+<input type="text" class="form-control " name="txtCorpOTP" id="txtCorpOTP" data-toggle="tooltip" maxlength="6" title="Please enter 6 digit authentication code sent to your registered mobile/email">
+<input type="hidden" name="accountno1_val" id="accountno1_val" />
+<label class="errorlabel error_txtCorpOTP"></label>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 comparegroup corp_div">
+<button type="button" class="btn btn-block btn-xs resend active displaynone" name="corpResendOTP" id="corpResendOTP">Resend OTP</button>
+<span class="timer btn btn-block btn-xs resend" id="timer1" style="height:42"></span>
+<input type="hidden" value="0" id="timerval1">
+</div>
+<div class="form-group md-grp col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<input type="hidden" name="corp_errors" id="corp_errors" />
+<label class="errorlabel error_corp_errors"></label>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttongroup">
+<div class="col-lg-3 col-md-3 col-sm-3"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+<div class="col-lg-1 col-md-1 col-sm-1"></div>
+<div class="col-lg-3 col-md-3 col-sm-3">
+<button type="button" class="btn btn-block btn-info btn-xs accordbtn " name="corpnxt" id="corpnxt">Next</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="col-lg-12 col-md-12 col-sm-12 accordsidemenu">
+<div id="accordion" role="tablist" aria-multiselectable="true">
+<div class="notesbg">
+<h6>*Important Notes</h6>
+<p><i class="fa fa-check"></i> If some field is not applicable, please input as <br>&nbsp;&nbsp;&nbsp;&nbsp;"NA"</p>
+<p><i class="fa fa-check"></i> Please ensure all fields are accurately updated <br>&nbsp;&nbsp;&nbsp;&nbsp;and related supporting documents are attached <br>&nbsp;&nbsp;&nbsp;&nbsp;(if required)</p>
+<p><i class="fa fa-check"></i> Please refer to communication regarding KYC <br>&nbsp;&nbsp;&nbsp;&nbsp;Remediation sent to your registered details for <br>&nbsp;&nbsp;&nbsp;&nbsp;additional information</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="scroll-top">
+<div class="scrollup">
+<i class="fa fa-angle-double-up"></i>
+</div>
+</div>
+<footer class="copyright-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="copyright">
+<p>Copyright &copy; 2019 Emirates Islamic. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+$().ready(function() {
+
+sectionvalidaions();
+
+$("input.form-control").each(function(index, element){
+    var input = $(element);
+    var label = $("label[for=" + input.attr("id") + "]");
+	var text = $(element).val();
+		if(text == ""){
+			if($(label).hasClass('active')) {
+	         	$(label).removeClass("active");
+	         }
+	    }
+	});
+});
+
+</script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/jquery.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/vendor/jquery-1.11.2.min.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/jquery.validate.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../includes/themes/EI-English/js/cdd/jquery.autocomplete.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/vendor/bootstrap-select.min.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/plugins.js" type="text/javascript"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/kyc.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/EIB.js"></script>
+<script type="text/javascript" src="../../../includes/themes/EI-English/js/cdd/materialize.min.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/modernizr.js" type="text/javascript"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../includes/themes/EI-English/js/cdd/js/jquery-ui.js"></script>
+<script src="../../../includes/themes/EI-English/js/cdd/js/custom.js"></script>
+<style> 
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 14px 25px;
+    /*pointer-events: none;*/
+}
+.fa-2x{font-size:1.2em}
+
+@media (max-width: 464px){
+.md-grp label {
+    top: 1.5rem;
+    left: 36px;
+    font-size: 1.2rem;
+}
+}
+</style>
+</body>
+
+<!-- Mirrored from www.emiratesislamic.ae/eng/kyc/cdd/cdd-authentication/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 01:33:07 GMT -->
+</html> </div>
+<div id="aside" class="regionTwo" name="region"> </div>
+</div>
+</div>
+</body> 

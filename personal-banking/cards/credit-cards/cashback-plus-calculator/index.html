@@ -1,0 +1,374 @@
+<style>
+	
+	#click-link a:link, a:active, a:visited{
+		color: white;
+		text-decoration: underline;
+	}	
+	
+	#click-link a:hover{
+		color: #f36c21;
+	}	
+	
+.range-slider {
+  margin: 0px!important;
+}
+
+	.range-slider__range {
+  -webkit-appearance: none;
+  width: calc(100% - (114px))!important;
+  height: 30px;
+  border-radius: 5px;
+-ms-border-radius: 5px;
+ /* background: #e0e0e0;*/
+	background: transparent;
+  outline: none;
+	-ms-outline: none;
+  padding: 0;
+  margin: 0;
+	border-bottom: none!important;
+	position: relative;
+	top: 10px;
+}
+
+.groc_spend_slider_value, .din_spend_slider_value, .edu_spend_slider_value, .tele_spend_slider_value ,.other_spend_slider_value, .mov_spend_slider_value, .air_spend_slider_value, .valet_spend_slider_value, .golf_spend_slider_value {
+  display: inline-block;
+  position: relative;
+  width: 101px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #421556;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.groc_spend_slider_value:after, .din_spend_slider_value:after, .edu_spend_slider_value:after, .tele_spend_slider_value:after, .other_spend_slider_value:after, .mov_spend_slider_value:after, .air_spend_slider_value:after, .valet_spend_slider_value:after, .golf_spend_slider_value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #421556;
+  border-bottom: 7px solid transparent;
+  content: '';
+}
+
+	
+	.blog-slider__title{
+		text-shadow: none!important;
+	}
+	
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<title>Sharia Compliant Personal, Business & Corporate Banking | Emirates Islamic</title>
+
+<!-- Mirrored from www.emiratesislamic.ae/eng/personal-banking/cards/credit-cards/cashback-plus-calculator/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 13:14:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta name="keywords" content="islamic bank, Islamic banking, Islamic bank abu dhabi, Islamic banks uae, online Islamic bankingbank">
+<meta name="description" content="Emirates Islamic bank offers sharia compliant banking solution which includes personal banking, business banking and corporate banking.">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta class="swiftype" name="lang" data-type="enum" content="en" />
+<meta class="swiftype" name="title" data-type="string" content="Emirates Islamic" />
+<meta class="swiftype" name="pagetype" data-type="string" content="Page" />
+<meta name="facebook-domain-verification" content="qn52yt6oo2gep4gu3pxro8obywv76g" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Cashback Calculator</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="../../../../assets/css/others/normalize.min.css">
+<link rel="stylesheet" href="../../../../assets/css/others/fontawesome.css">
+
+<link rel="stylesheet" href="../../../../assets/css/others/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../assets/css/others/swiper.min.css">
+<link rel="stylesheet" href="../../../../assets/css/others/bootstrapdatetimepicker.html">
+<link rel="stylesheet" href="../../../../assets/css/others/jquery.mCustomScrollbar.html" />
+<link rel="stylesheet" href="../../../../assets/css/others/style.css">
+<link rel="stylesheet" href="../../../../assets/css/others/responsive.css">
+<link rel="stylesheet" href="../../../../assets/css/others/airdatepicker.css">
+<link rel="stylesheet" href="../../../../assets/css/others/export.html" type="text/css" media="all" />
+<link href="../../../../assets/css/loan_calc.css" rel="stylesheet">
+<script src="../../../../assets/js/jquery3.6.0.min.js"></script>
+<script src="../../../../assets/js/scripts.js"></script>
+<script src="../../../../assets/js/jquery-ui.min.js"></script>
+<script src="../../../../assets/js/popper.min.js"></script>
+<script type="text/javascript" src="../../../../../../cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">
+<a href="../../../../index.html"><img src="../../../../assets/images/emirates-islamic-logo.png" width="221" height="36" alt="Emirates Islamic" title="Emirates Islamic"></a>
+</div>
+</div>
+</header>
+
+<div class="container blog-slider-container">
+<div class="blog-slider">
+<div class="blog-slider__wrp swiper-wrapper">
+
+<div class="blog-slider__item swiper-slide">
+
+<div class="blog-slider__content">
+<div class="blog-slider__title">Cashback Calculator</div>
+<div class="blog-slider__title" style="font-size: 20px; color: #f36c21;">Enter your monthly spends</div>
+<form>
+<div class="form-group">
+<label>Grocery/Supermarket Spends (in AED)</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_grocery" type="range" value="0" min="0" max="50000" step="100" required>
+<span class="groc_spend_slider_value">0</span></div>
+</div>
+<div class="form-group">
+<label>Dining Spends (in AED)</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_dining" type="range" value="0" min="0" max="50000" step="100" required>
+<span class="din_spend_slider_value">0</span> </div>
+</div>
+<div class="form-group">
+<label>Education Spends (in AED)</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_education" type="range" value="0" min="0" max="50000" step="100" required>
+<span class="edu_spend_slider_value">0</span> </div>
+</div>
+<div class="form-group">
+<label>Telecom Spends (in AED)</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_telecom" type="range" value="0" min="0" max="50000" step="100" required>
+<span class="tele_spend_slider_value">0</span> </div>
+</div>
+<div class="form-group">
+<label>Other Monthly Spends (in AED)</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_other" type="range" value="0" min="0" max="50000" step="100" required>
+<span class="other_spend_slider_value">0</span> </div>
+</div>
+<div style="background-color: #e0dddd; height: auto; border-radius: 5px; margin-top: 30px;">
+<div style="text-align: center;padding: 12px;">
+<h3 style="word-spacing:normal; font-size:16px;margin-bottom: 0px;"><strong style="color: #421556;">Based on your chosen spends with Emirates Islamic Cashback Plus Credit Card, you could earn </strong><div style="font-size: 24px; color:#f36c21; margin-top:5px;"><strong>AED <span id="annualcashback">0</span></strong> Cashback Per Annum</div></h3>
+</div>
+</div>
+<div>
+<p style="font-size: 10px; text-align: center; line-height: 14px; padding:10px; margin-bottom:0px;">Please note that this is just an estimated calculation based on above amounts.</p>
+</div>
+</form>
+<div class="blog-slider__title">Other Value Benefits</div>
+<div class="blog-slider__title" style="font-size: 20px; color: #f36c21;">Enter your annual usage</div>
+<form>
+<div class="form-group">
+<label>Number of Movie Ticket Purchases</label>
+<div class="range-slider">
+<input class="range-slider__range" name="slider_movie" type="range" value="0" min="0" max="12" step="1" required>
+<span class="mov_spend_slider_value">0</span></div>
+</div>
+<div class="form-group">
+<label>Number of Airport Lounge Accesses</label>
+<div class="range-slider" id="_airspends">
+<input class="range-slider__range" name="slider_airport" type="range" value="0" min="0" max="10" step="1" required>
+<span class="air_spend_slider_value">0</span> </div>
+</div>
+<div class="form-group">
+<label>Number of Valet Parking Services</label>
+<div class="range-slider" id="_valetspends">
+<input class="range-slider__range" name="slider_valet" type="range" value="0" min="0" max="5" step="1" required>
+<span class="valet_spend_slider_value">0</span> </div>
+</div>
+<div class="form-group">
+<label>Number of Golf Round Accesses</label>
+<div class="range-slider" id="_golfspends">
+<input class="range-slider__range" name="slider_golf" type="range" value="0" min="0" max="5" step="1" required>
+<span class="golf_spend_slider_value">0</span> </div>
+</div>
+<div style="background-color: #e0dddd; height: auto; border-radius: 5px; margin-top: 30px;">
+<div style="text-align: center; padding: 12px;">
+<h3 style="word-spacing:normal; font-size:16px;margin-bottom: 0px;"><strong style="color: #421556;">You could additionally save up to </strong><div style="font-size: 24px; color:#f36c21; margin-top:5px;"><strong>AED <span id="annualbenefits_savings">0</span></strong> Per Annum</div></h3>
+</div>
+</div>
+<div>
+<p style="font-size: 10px; text-align: center; line-height: 14px; padding:10px; margin-bottom:0px;">Terms and Conditions apply.</p>
+</div>
+</form>
+</div>
+
+
+<div class="blog-slider__img" id="moreinfo">
+<div id="content-scroll" class="blog-slider__text calctext mCustomScrollbar" style="overflow-y:auto">
+<h3 style="font-size:16px; word-spacing:normal; line-height:normal;">Cashback Plus Credit Card</h3>
+<p><img src="../../../../assets/images/EI-cashback-plus-card-550x356.png" style="opacity:unset; height: auto;"></p>
+<p>
+<ul>
+<li>Up to 10% cash back on supermarket spends.</li>
+<li>Up to 10% cash back on education.</li>
+<li>Up to 10% cash back on dining.</li>
+<li>Up to 10% cash back on telecom expenses.</li>
+<li>Unlimited complimentary access to over 1,000 airport lounges worldwide.</li>
+<li>Complimentary Access to Dubai Ladies Club & Sharjah Ladies Club.</li>
+<li>2 complimentary rounds of golf any day of the week.</li>
+<li id="click-link">For more details about Cashback Plus Credit Card features, <a href="../cashback-plus-credit-card/index.html" target="_blank">click here</a>.</li>
+</ul>
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p class="copyright text-center">Copyright &copy; 2022 Emirates Islamic. All rights reserved.</p>
+</div>
+</footer>
+<script src="../../../../assets/js/others/jquery.min.js"></script>
+<script src="../../../../assets/js/others/swiper.js"></script>
+<script src="../../../../assets/js/others/index.js"></script>
+<script src="../../../../assets/js/jquery.ui.touch-punch.min.js"></script>
+
+<script type="text/javascript" src="../../../../assets/js/others/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../../../../cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<script>
+ 
+
+
+	//Function to add comma ',' in the numbers.	
+ $.fn.digits = function(){ 
+            return this.each(function(){ 
+                $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+            })
+        }      
+ $(function(){
+	  
+
+ $('.range-slider__range,.groc_spend_slider_value').on("change", function(e) {  e.preventDefault();
+          //  alert('clicked');
+	 	//getting the valuse from the sliders
+	 	var sliderval_groc=parseFloat($('.groc_spend_slider_value').text().replace(/,/g, ""));
+	 	var sliderval_din=parseFloat($('.din_spend_slider_value').text().replace(/,/g, ""));
+	 	var sliderval_edu=parseFloat($('.edu_spend_slider_value').text().replace(/,/g, ""));
+	 	var sliderval_tele=parseFloat($('.tele_spend_slider_value').text().replace(/,/g, ""));
+	    var sliderval_other=parseFloat($('.other_spend_slider_value').text().replace(/,/g, "")); 
+	   
+	   
+	    var totalmonthlyspends=0;
+	   
+	    totalmonthlyspends=parseFloat(sliderval_groc+sliderval_din+sliderval_edu+sliderval_tele+sliderval_other).toFixed(0);
+	    $('#total_monthlyspends').text(totalmonthlyspends).digits();
+	    $('.groc_spend_slider_value').text(sliderval_groc).digits();
+	    $('.din_spend_slider_value').text(sliderval_din).digits();
+	    $('.edu_spend_slider_value').text(sliderval_edu).digits();
+	    $('.tele_spend_slider_value').text(sliderval_tele).digits();
+	    $('.other_spend_slider_value').text(sliderval_other).digits();
+	   
+	    
+	 
+	    //Start:Conditions for the Multiplying factor
+	    var multiplier=0;
+	    if(totalmonthlyspends>17499)
+			{ multiplier=0.1; }
+	    else if(totalmonthlyspends>9999)
+			{ multiplier=0.05;}
+	    else if(totalmonthlyspends>2999)
+			{ multiplier=0.03;}
+	 	else
+	 		{ multiplier=0;}
+	 
+	    //$('#f_multiplier').html(multiplier);
+	    //End:Conditions for the Multiplying factor
+	    
+	    
+	    //Start: Conditions for the cashback for each category
+	    var groccashback=0;
+	    if ((sliderval_groc*multiplier)>200)
+			{ groccashback=2400; }
+	   	else
+		   	{ groccashback=parseFloat(sliderval_groc*12*multiplier); }
+	 
+	   	var dincashback=0;
+	    if ((sliderval_din*multiplier)>200)
+			{ dincashback=2400; }
+	   	else
+		   	{ dincashback=parseFloat(sliderval_din*12*multiplier); }
+	 
+	   	var educashback=0;
+	    if ((sliderval_edu*multiplier)>200)
+			{ educashback=2400; }
+	   	else
+		   	{ educashback=parseFloat(sliderval_edu*12*multiplier); }
+	 
+	   	var telecashback=0;
+	    if ((sliderval_tele*multiplier)>200)
+			{ telecashback=2400; }
+	   	else
+		   	{ telecashback=parseFloat(sliderval_tele*12*multiplier); }
+	 
+	   	var othercashback=0;
+	   	othercashback=parseFloat(sliderval_other*0);
+	    //End: Conditions for the cashback for each category
+	 
+        var totalcashback=0;  
+	 
+	 	totalcashback=parseFloat(groccashback+dincashback+educashback+telecashback+othercashback).toFixed(0);
+        $('#annualcashback').text(totalcashback).digits();
+	    
+	    //Start: Other Value Benefits
+	    var sliderval_mov=parseFloat($('.mov_spend_slider_value').text().replace(/,/g, ""));
+	    var sliderval_air=parseFloat($('.air_spend_slider_value').text().replace(/,/g, ""));
+	    var sliderval_valet=parseFloat($('.valet_spend_slider_value').text().replace(/,/g, ""));
+	    var sliderval_golf=parseFloat($('.golf_spend_slider_value').text().replace(/,/g, ""));
+	 
+	 
+	    var mov_savings=parseFloat((sliderval_mov*45)/2);
+	    var air_savings=parseFloat(sliderval_air*50*3.67);
+	    var valet_savings=parseFloat(sliderval_valet*50);
+	    var golf_savings=parseFloat(sliderval_golf*400);
+	    
+	    var totalannualbenefits=parseInt(mov_savings+air_savings+valet_savings+golf_savings);
+	    $('#annualbenefits_savings').text(totalannualbenefits).digits();
+	    //End: Other Value Benefits
+		
+ 		});
+ });
+ 
+	
+</script>
+<style>
+ 
+ #content-scroll
+ {
+	 word-spacing:0px !important;
+	 width:96% !important;
+ }
+ button.close {
+	padding-top: 3px;
+	padding-right: 10px;
+}
+.close {
+	opacity: 1.2;
+	color: white;
+}
+.modal-backdrop {
+	opacity: 0.8 !important;
+}
+@media screen and (min-width: 768px) {
+#myModal .modal-dialog {
+	width: 45% !important;
+	margin-left: auto;
+}
+}
+/* 
+<!-- .blog-slider__img{width:44% !important;}-->*/
+ </style>
+</body>
+
+<!-- Mirrored from www.emiratesislamic.ae/eng/personal-banking/cards/credit-cards/cashback-plus-calculator/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 13:14:04 GMT -->
+</html> 
